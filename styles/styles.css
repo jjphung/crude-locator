@@ -1,5 +1,14 @@
 /* CUSTOM STYLES HERE */
 
+.custom-nav-col, .custom-container, .navbar{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.mobile-logo{
+    display:none;
+}
+
 #header{
     font-family: "Helvetica";
     font-size: 30px;
@@ -15,6 +24,10 @@
     text-align: center;
     vertical-align: middle;
     line-height: 600px;
+}
+
+.menu-text{
+    margin-right: 20px;
 }
 
 .truck-style{
@@ -90,7 +103,7 @@
 }
 
 .card.overlay{
-    width: 90% !important;
+    width: 94% !important;
     position: absolute;
     z-index: 5;
     height: 95%;
@@ -158,6 +171,11 @@
 }
 /* MEDIA QUERIES */
 @media only screen and (max-width: 991px) and (min-width: 319px){
+    .custom-container{
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+
     .map-area, .truck-style, #header{ 
         display:none; 
     }
@@ -167,6 +185,14 @@
     }
     .mobile-footer-wrapper{
         display: flex;
+    }
+
+    .mobile-logo{
+        display: block;
+    }
+
+    .nonmobile-logo{
+        display: none;
     }
 
 }
