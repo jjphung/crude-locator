@@ -1,0 +1,172 @@
+/* CUSTOM STYLES HERE */
+
+#header{
+    font-family: "Helvetica";
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.map-wrap{
+    background-color: #C8C8C8;
+    height: 100%;
+}
+
+#map-text{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 600px;
+}
+
+.truck-style{
+    padding-left: 0px !important; 
+}
+
+.card-link{
+    text-transform: uppercase;
+}
+
+.card-link a{
+    color: white;
+}
+
+.row-height{
+    height: 82vh; 
+    border: 1px solid #c8c8c8;
+}
+
+.card-area{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+}
+.map-area{
+    height:100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.card{
+    margin: 15px;
+    box-shadow: 3px 3px 3px #bebebe;
+}
+
+.card-title{
+    font-weight: lighter !important;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    line-height: 1.2;
+    color: inherit;
+    font-size: 22px;
+}
+
+#miles{
+    float: right;
+}
+
+.card-subtitle{
+    font-weight: lighter !important;
+}
+
+.open-today{
+    color: #10b581;
+}
+
+.phone{
+    color: #FCB040;
+}
+
+.btn-dir-style{
+    float: left;
+    width: 45%;
+}
+
+.btn-info-style{
+    float: right;
+    width: 45%;
+}
+
+.card.overlay{
+    width: 90% !important;
+    position: absolute;
+    z-index: 5;
+    height: 95%;
+    padding: 15px;
+}
+
+#exit{
+    text-align: right;
+}
+
+.card.overlay .card-title{
+    display: block;
+    text-align: left;
+}
+
+.card.overlay .card-subtitle{
+    text-align: left;
+}
+
+.card.overlay .card-body{
+    overflow-y: scroll;
+}
+
+.days, .day-times, .overlay-phone{
+    text-align: left;
+}
+
+.card.card-footer{
+    margin: 0px;
+    width: 50%;
+    box-shadow: none;
+}
+.custom-card{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 50%;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.custom-card-body{
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+#list-footer, #map-footer{
+    text-align: center;
+    padding: 0 !important;
+
+}
+
+#list-footer{
+    color: #FFFFFF;
+    background-color: #FCB040;
+}
+
+#map-footer{
+    color: #FCB040;
+    background-color: #FFFFFF;
+}
+.mobile-footer-wrapper{
+    position: relative;
+    z-index: 20;
+    display: none;
+}
+/* MEDIA QUERIES */
+@media only screen and (max-width: 991px) and (min-width: 319px){
+    .map-area, .truck-style, #header{ 
+        display:none; 
+    }
+
+    .navbar{
+        background-color: #858585;
+    }
+    .mobile-footer-wrapper{
+        display: flex;
+    }
+
+}
