@@ -2,4 +2,4 @@
 
 Jeffrey Phung
 
-TODO: CSS tweaks: navbar, overlay side grays
+TODO: CSS tweaks: navbar
