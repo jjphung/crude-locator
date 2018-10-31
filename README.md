@@ -1,3 +1,3 @@
-## Taco Truck Locator 
+## Address Locator 
 
 Jeffrey Phung
