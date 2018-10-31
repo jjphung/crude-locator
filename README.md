@@ -1,5 +1,3 @@
-## Taco Truck Locator Code Assessment
+## Taco Truck Locator 
 
 Jeffrey Phung
-
-Scrollable Overlay Info Box for varying window heights
