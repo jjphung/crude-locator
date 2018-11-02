@@ -1,14 +1,16 @@
 $(document).ready(function() {
     $.ajax({
         method: "GET",
-        url: 'https://my.api.mockaroo.com/locations.json?key=a45f1200',
+        //TODO: replace url with your own
+        url: 'https://my.api.mockaroo.com/locations.json?key=ENTERKEYHERE',
         dataType: 'json'
     }).success(function (response) {
         // work with response data here
         $('.header').prepend('<p id="header">'+ 'Found '+ response.length + ' Taco Trucks in 92121' + '</p>');
-        
+
         //creation of cards
         for (var i = 0; i < response.length; i++){
+            
             $('.card-area').append(
                 '<div class="card" id="' + response[i].id +'"' + '> \
                     <div class="card-body">\
@@ -22,13 +24,16 @@ $(document).ready(function() {
                         <span class="card-text phone">111-123-4122</span>\
                         <br/>\
                         <br/>\
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=' + response[i].latitude + ',' + response[i].longitude + '&travelmode=driving" target="_blank"><button type="button" class="btn btn-dark btn-dir-style card-link" id="dir">Directions</button></a>\
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=' + response[i].latitude + ',' + response[i].longitude + '&travelmode=driving" target="_blank">\
+                        <button type="button" class="btn btn-dark btn-dir-style card-link" id="dir">Directions</button>\
+                        </a>\
                         <button type="button" class="btn btn-dark btn-info-style card-link" id="info" href="#">More info</button>\
                     </div>\
                 </div>'
             );
         }
 
+        
         //initial page load
         $('.map').css('display', 'none');
 
@@ -42,7 +47,9 @@ $(document).ready(function() {
             //hide text and show new map
             $('#map-text').hide();
             $('.map').show();
-            $('.map').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + response[i-1].latitude + ', ' + response[i-1].longitude + '&zoom=13&scale=2&size=200x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C' + response[i-1].latitude + ', ' + response[i-1].longitude);
+
+            //TODO: Using Static Map Google API; replace API key
+            $('.map').attr('src', 'https://maps.googleapis.com/maps/api/staticmap?center=' + response[i-1].latitude + ', ' + response[i-1].longitude + '&zoom=13&scale=2&size=200x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0xff0000%7Clabel:1%7C' + response[i-1].latitude + ', ' + response[i-1].longitude + "&key=ENTERKEYHERE");
             
 
         });
